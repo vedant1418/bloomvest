@@ -1,0 +1,9 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Hello, {{ request.user.username }} 👋</h2>
+<div>
+    <strong>Wallet Balance:</strong> ₹{{ profile.wallet_balance }}
+</div>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
